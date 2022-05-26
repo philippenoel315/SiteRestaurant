@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<title> Burger Shop </title>
+	<meta name="Site web de Burger Shop" content="Bienvenue sur le magnifique site web de Burger Shop">
+	
+	<!-- meta viewport : importante à inclure pour l'affichage sur les divers appareils -->
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="favicon.ico">
+	
+</head>
+<header>
+	<div>
+		<div class="flex-en-tête">
+			<a  href="index.html"><img class="logo" href="index.html" src="img/logo-burger-shop.png"></a>
+
+			<nav>
+				<img class="show-on-mobile" src="img/icon-menu.png">
+				<ul class="hide-on-mobile">
+					
+					<li><a class="btn" href="index.html">Menu</a></li>
+					<li><a class="btn" href="reservation.html">Réservation</a></li>
+					<li><a class="btn" href="restaurant.html">Restaurant</a></li>
+					<li><a class="btndark" href="macommande.html">Ma commande</a></li>					
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<body>
+	
+
+	<main class="container flex-centre">
+
+	<h2>Réservation</h2>
+	<form method="get" action="pageconfirmation.html">
+		<div ><fieldset class="flex-cote ">
+			<legend><strong>Veuillez remplir les champs</strong></legend>
+	<div class="pad">
+		<div>
+		<label for="prenom">Prénom</label>
+		<input type="text" id="prenom" name="prenom" maxlength="20" required/>
+		</div>
+		<div>
+		<label for="nom">Nom</label>
+		<input type="text" id="nom" name="nom" maxlength="20" required/>
+		</div>
+		<div>
+		<label for="telephone">Numéro de télephone</label>
+		<input type="tel" id="telephone" name="telephone" placeholder="999-999-9999" maxlength="12" required/>
+		</div>			
+		<div>	
+		<label for="nbPersonnes">Nombre de personnes</label>
+		<input type="number" id="nbPersonnes" name="nbPersonnes" value="1" min="1" max="20" required/>
+		</div>
+	</div>
+	<div class="pad">
+		<div>		
+		<label for="date">Date de la réservation</label>
+		<input type="date" id="date" name="date" required/>
+		</div>
+		<div>
+		<label for="lieu">Où voulez-vous manger?</label>		
+		<select name="lieu" required>
+			<option selected>Salle à manger</option>
+			<option>Terrasse</option>
+		</select>
+			</div>				
+		<div>
+		<label for="heure">Quelle est l'heure de la réservation</label>
+		<select name="heure" required>
+			<option>12:00</option>
+			<option>12:30</option>
+			<option>13:00</option>
+			<option>13:30</option>
+			<option>17:00</option>
+			<option>17:30</option>
+			<option>18:00</option>
+			<option>18:30</option>
+			<option>19:00</option>
+			<option>19:30</option>
+			<option>20:00</option>
+			<option>20:30</option>
+			<option>21:00</option>
+		</select>
+		</div>
+		<div>
+			<label for="commentaire">Laissez un commentaire</label>
+		<textarea name="commentaire"></textarea>
+	</div>
+					
+		<div class="default">
+		<label for="infolettre">Je veux recevoir l'infolettre</label>
+		<input type="checkbox" id="infolettre" name="infolettre" class="flex-infolettre" checked/>
+			</div>
+		
+	</div>
+		</fieldset>
+	</div>
+		<input type="submit" value="Soumettre"/>
+	</form>
+</main>
+
+</body>
+<footer>
+	<p><strong>Burger Shop</strong> 1660 boul de l'Entente, Québec</p>
+	<a class="btn" href="418-999-9999">999-999-9999</a>
+</footer>
+</main>
+
+<div class="bas-de-page">
+<p>Site réalisé par <strong>Philippe Noël</strong> dans le cadre du programme technique de l'informatique Cégep Garneau</p>
+</div>
+</body>
+</html>

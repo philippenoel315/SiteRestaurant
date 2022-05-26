@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/*font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto', sans-serif;*/
+/* Propriétés générales */
+
+* {box-sizing: border-box;}
+
+img {max-width: 100%;}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #F9FBF9;	
+}
+main{
+	background-color: #F9FBF9;	
+}
+
+aside{
+	background-color: #50479B;
+}
+
+
+header{
+	background-color:#F9FBF9;
+	background-image: url(../img/resto/salle-restaurant.png);
+	background-position: center left;
+	background-size: 100%;
+
+	padding:20px 0 20px 10px;
+
+}
+input, select, textarea{margin: 10px 0 10px 0;
+align-content: center;}
+
+
+
+h2{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.5rem;
+}
+h3{font-family: 'Bebas Neue', cursive;
+font-size: 2rem;}
+
+
+footer{	
+	background-color: #707BA4;
+}
+
+.commande{
+	display:flex;
+	justify-content: space-between;
+	flex-direction: row;
+	
+}
+
+.pad{padding: 20px;}
+
+
+/*Classe pour le header*/
+
+.flex-en-tête{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+
+.hide-on-mobile{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	list-style-type: none;
+	
+}
+
+.btn{
+	color:black;
+	background-color: white;
+	padding: 10px;
+	margin: 10px;
+	text-decoration: none;
+	border-radius: 5px;
+	max-width: 150px;
+	text-align: center;
+	border: solid 3px;
+}
+
+.btn:hover{
+	background-color: #707BA4;
+	color:white;
+
+}
+
+.btndark{
+	background-color: gray;
+	color: black;
+	padding: 10px;
+	margin: 10px;
+	text-decoration: none;
+	border-radius: 5px;
+	max-width: 150px;
+	text-align: center;
+}
+
+.btndark:hover{
+	color: white;
+}
+
+.logo{
+	width: 200px;
+}
+
+/*Fin classe header*/
+
+/*Classes pour disposition du menu*/
+
+.card{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex-menu{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+.show-on-mobile{
+	display: none !important;
+}
+
+.item{font-size: 1.5rem;
+font-weight: 700;
+text-align: center;
+margin-bottom: 0px;}
+
+.marge-bas{margin-bottom: 20px;}
+
+
+.bordure{
+	border-bottom: solid 2px;
+}
+
+.classe-liste{
+	list-style-image: url(../img/icon-fleche-fonce.png);
+}
+/*fin classe menu*/
+
+
+
+
+
+/*Bas de page*/
+.tshirt{
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+		
+}
+
+.color{background-color: #e2e1e6;}
+
+.width{
+	width:50%
+}
+
+
+
+
+
+.centrer{
+	text-align: center;
+}
+
+
+.bas-de-page{background-color: #F9FBF9;
+	text-align: center;}
+
+/*=============================
+Classe pour les grid containers
+===============================*/
+
+.grid-container{
+	display: grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+gap: 5px;
+
+}
+.grid-photo-haut{
+	display:grid;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start:1;
+	grid-column-end:3;
+}
+.grid-photo-bas{
+	display: grid;
+	grid-row-start: 3;
+	grid-row-end:5;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.item1{grid-area:dv;}
+.item2{grid-area:as;}
+
+.grid-sidebar{
+	display:grid;
+	grid-template-columns: 2fr 1fr;
+	
+	grid-template-areas: 
+	'dv as'
+	'dv .';
+	gap: 20px;
+}
+
+
+
+
+
+/*==========================
+Classes pour le formulaire
+============================*/
+div{
+	display:block;
+	
+	
+}
+input, textarea, select{width: 200px;}
+
+.default{display: inline;
+margin: 0;}
+
+.flex-cote{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.flex-infolettre{
+	width: 10px;
+	
+}
+fieldset{width: 50%;}
+
+/*Classes pour la grid fin */
+/*liste des media queries*/
+
+@media screen and (max-width: 1200px)
+{
+	
+}
+
+@media screen and (max-width: 960px)
+{
+	.hide-on-mobile{
+		display: none !important;
+	}
+	.show-on-mobile{
+		display: block !important;
+		padding: 10px;
+	}
+
+	/*================================
+	Page restaurant
+	==================================*/
+	.grid-container{
+		display: grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 5px;
+	
+	}
+	.grid-photo-haut{
+		display:grid;
+		grid-row-start: 1;
+		grid-row-end: 3;
+		grid-column-start:1;
+		grid-column-end:3;
+		width: 100%;
+	}
+	.grid-photo-bas{
+		display: grid;
+		grid-row-start: 5;
+		grid-row-end:7;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 100%;
+	}	
+
+/*===========================
+Page du formulaire
+=============================
+*/
+
+.flex-cote{flex-direction: column;}
+
+} 
+	
+@media screen and (max-width:570px)
+{
+	.logo{
+		width:50%;
+	}
+	.card{
+		width: 150px;
+
+	}
+	
+/*===========================
+Page du formulaire
+=============================
+*/
+
+fieldset{width: 100%;}
+	
+}
